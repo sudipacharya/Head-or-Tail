@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heads Or Tails</title>
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <center>
+      <h1>Heads or Tails</h1>
+    </center>
+
+    <div id="username_div">
+      <form
+        onsubmit="username_submit(event)"
+        action="
+      "
+      >
+        <input type="text" id="username" />
+        <br />
+        <small style="color: #666">Username must be 5 character long</small>
+
+        <br />
+        <button type="submit" style="background: red; color: white">
+          Start Game
+        </button>
+      </form>
+    </div>
+
+    <div id="game_div" style="display: none;">
+      Welcome <span id="user"></span>
+
+      <br />
+
+      <div class="side_chooser">
+        <b>Choose your side:</b>
+        <br />
+        <button
+          style="background-color: #2c7873; color: white; width: 100px"
+          onclick="start_game('head')"
+        >
+          head
+        </button>
+        <button
+          style="background-color: #d60d4b; color: white; width: 100px"
+          onclick="start_game('head')"
+        >
+          tail
+        </button>
+      </div>
+    </div>
+    <div id="flipping" style="display: none;"> 
+      flipping ...
+      <br>
+      <img src="./images/loading.gif" alt="loading" style="width: 50px;">
+
+
+    </div>
+
+    <div id="results" style="display: none;">Results</div>
+
+
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
